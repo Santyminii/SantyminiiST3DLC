@@ -28,7 +28,7 @@ header {
     color: white;
     padding: 60px 20px;
     text-align: center;
-    border-bottom: 2px solid hsl(238, 100%, 81%);
+    border-bottom: 2px solid hsl(0, 100%, 76%);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     position: relative;
