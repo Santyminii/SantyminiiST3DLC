@@ -39,7 +39,7 @@ header h1 {
     font-family: 'LD Slender', sans-serif;
     margin: 0; 
     font-size: 4rem; 
-    text-shadow: 0 0 15px rgba(68, 76, 247, 0.7);
+    text-shadow: 0 0 15px rgba(247, 68, 68, 0.7);
 }
 
 header p {
