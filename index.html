@@ -4,127 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ST3: The apocalypse reboot</title>
-    
-    <link rel="icon" type="image/png" href="favicon.png">
-    
     <link rel="stylesheet" href="style.css">
+    <style>
+    h1 {
+        font-size: 55px !important;
+        font-weight: bold !important;
+    }
+
+    h3 {
+        color: #ff9999 !important;
+        font-size: 38px !important;
+        font-weight: bold !important;
+        margin-top: 30px !important;
+    }
+
+    p {
+        line-height: 1.8 !important;
+        margin-bottom: 20px !important;
+        font-size: 26px !important;
+        font-weight: bold !important;
+    }
+
+    .card a {
+        display: block !important;
+        text-align: center !important;
+        font-size: 30px !important;
+        color: #ff4141 !important;
+    }
+
+    /* Estilo para el mensaje de estado del formulario */
+    #my-form-status {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
-
     <header>
         <h1>SLENDYTUBBIES 3: The apocalypse reboot</h1>
         <p>Proyecto dirigido por Santyminii</p>
     </header>
 
-    <main class="container">
-        <section class="card">
+    <div class="container">
+        <div class="card">
             <h2 class="titulo-dlc"><span>Slendytubbies III:</span> The apocalypse DLC</h2>
             
-            <p>
-                Slendytubbies III: The Apocalypse DLC es una expansion independiente de Slendytubbies 3, el cual contiene la continuacion del final bueno del juego.
-            </p>
-
-            <p class="centrado">
-                Sobre El Proyecto.
-            </p>
+            <p>Slendytubbies III: The Apocalypse DLC es una expansion independiente de Slendytubbies 3, el cual contiene la continuacion del final bueno del juego.</p>
             
-            <p class="texto">
-                El proyecto esta siendo desarrollando en Unity 3d 6000.3.5f2 (Proximamente actualizaciones) y su guion esta siendo trabajado semanalmente en Word con ideas en Obsidian.
-                El proyecto busca que ZeoWorks colabore con nosotros tomandolo como canon y subiendolo como suyo, construido para fans y hecho por fans.
-                Cada version de prueba que hagamos la pondremos aqui C:
-            </p>
+            <h3>Sobre El Proyecto.</h3>
+            <p>El proyecto esta siendo desarrollado en Unity 3d 6000.3.5f2 (Proximamente actualizaciones) y su guion esta siendo trabajado semanalmente en Word con ideas en Obsidian. El proyecto busca que ZeoWorks colabore con nosotros tomandolo como canon y subiendolo como suyo, construido para fans y hecho por fans. Cada version de prueba que hagamos la pondremos aqui C:</p>
+            
+            <h3>Y... ¿donde veo actualizaciones?</h3>
+            <p>Puedes ver actualizaciones del proyecto en mi canal "Santyminii" o entrando al link de aqui:</p>
+            <a href="https://www.youtube.com/@Santyminii" target="_blank">https://www.youtube.com/@Santyminii</a>
 
-            <p class="subtitulo-seccion">
-                Y... donde veo actualizaciones?
-            </p>
-
-            <p class="texto">
-                Puedes ver actualizaciones del proyecto en mi canal "Santyminii" o entrando al link de aqui: 
-                <br>
-                <a href="https://www.youtube.com/@Santyminii" target="_blank" class="link-youtube">
-                    https://www.youtube.com/@Santyminii
-                </a>
-            </p>
-
-            <p class="centrado">
-                Imagenes
-            </p>
-
+            <h2 class="titulo-dlc"><span>IMAGENES</span></h2>
             <div class="contenedor-triangulo">
-                <div class="fila-superior">
-                    <img src="Image1.jpg" alt="Introducción" class="img-proyecto">
-                    <img src="Image2.jpg" alt="Main" class="img-proyecto">
-                </div>
-                <div class="fila-inferior">
-                    <img src="Image3.png" alt="Imagen DLC" class="img-proyecto">
-                </div>
+                <img src="Image1.jpg" alt="Imagen 1" class="img-proyecto">
+                <img src="Image2.jpg" alt="Imagen 2" class="img-proyecto">
+                <img src="Image3.png" alt="Imagen 3" class="img-proyecto">
             </div>
 
-            <h2 class="titulo-dlc" style="margin-top: 80px; font-size: 5rem;">Feedback</h2>
-            
-            <p class="texto">
-                ¿Tienes ideas para el DLC? Comentalo :)
-            </p>
+            <div class="formulario-feedback">
+    <h3>¿Tienes ideas para el DLC?</h3>
+    <p class="form-subtitle">Deja tu feedback, nosotros lo leeremos :D</p>
 
-            <form id="formFeedback" class="formulario-feedback">
-                <input type="text" id="apodo" placeholder="Tu apodo" required>
-                <textarea id="comentarios" placeholder="aqui tu feedback" required></textarea>
-                <button type="submit" id="btnEnviar">Enviar</button>
-            </form>
+    <form id="my-form" action="https://formspree.io/f/xreybkrj" method="POST" class="feedback-form">
+        <div class="form-group">
+            <label for="apodo">Tu apodo</label>
+            <input 
+                type="text" 
+                id="apodo" 
+                name="apodo" 
+                placeholder="Tu apodo" 
+                required 
+                autocomplete="off"
+            >
+        </div>
 
-            <div id="mensajeExito" style="display:none; text-align:center; margin-top:20px; color: #444cf7; font-family: 'LD Slender'; font-size: 1.2rem;">
-                Gracias por tu mensaje, seguiremos trabajando :)
-            </div>
-            </section> 
-    </main> 
+        <div class="form-group">
+            <label for="mensaje">feedback</label>
+            <textarea 
+                id="mensaje" 
+                name="mensaje" 
+                placeholder="Aqui escribe lo que piensas..." 
+                rows="10" 
+                required
+            ></textarea>
+        </div>
 
-    <footer>
-        <p>Santyminii 2026</p>
-    </footer>
-
-    <a href="https://discord.gg/jKUaAtXTCK" target="_blank" class="discord-estatico">
-        Unete a nuestro Discord
-    </a>
-
-    <script>
-      // REEMPLAZA ESTA URL POR LA DE TU WEB APP DE GOOGLE
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxp4O6MyV36_PvFUZf6i-rfZ9yZ8t0kdWm8JJXlKvPeJU6xbN1iPKAU5EvjHujZ2bsE/exec'; 
-      const form = document.getElementById('formFeedback');
-      const btn = document.getElementById('btnEnviar');
-      const exito = document.getElementById('mensajeExito');
-
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        btn.disabled = true;
-        btn.innerText = 'Enviando...';
-
-        const datos = {
-          apodo: document.getElementById('apodo').value,
-          feedback: document.getElementById('comentarios').value
-        };
-
-        fetch(scriptURL, {
-          method: 'POST',
-          mode: 'no-cors', 
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(datos)
-        })
-        .then(() => {
-          exito.style.display = 'block';
-          form.reset();
-          btn.disabled = false;
-          btn.innerText = 'Enviar';
-          setTimeout(() => { exito.style.display = 'none'; }, 5000);
-        })
-        .catch(error => {
-          console.error('Error!', error.message);
-          btn.disabled = false;
-          btn.innerText = 'Reintentar';
-        });
-      });
-    </script>
-
-</body>
-</html>
-
-
+        <button id="my-form-button" type="submit" class="btn-enviar">
+            <span>Enviar Feedback</span>
+</div>
