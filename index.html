@@ -67,8 +67,8 @@
             </p>
 
             <form id="formFeedback" class="formulario-feedback">
-                <input type="text" id="apodo" placeholder="Tu apodo de superviviente" required>
-                <textarea id="comentarios" placeholder="Escribe tu feedback aquí..." required></textarea>
+                <input type="text" id="apodo" placeholder="Tu apodo" required>
+                <textarea id="comentarios" placeholder="aqui tu feedback" required></textarea>
                 <button type="submit" id="btnEnviar">Enviar</button>
             </form>
 
@@ -113,7 +113,7 @@
           exito.style.display = 'block';
           form.reset();
           btn.disabled = false;
-          btn.innerText = 'Enviar al Almacén';
+          btn.innerText = 'Enviar';
           setTimeout(() => { exito.style.display = 'none'; }, 5000);
         })
         .catch(error => {
@@ -126,4 +126,5 @@
 
 </body>
 </html>
+
 
