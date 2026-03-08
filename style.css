@@ -1,4 +1,4 @@
-/* --- RECONSTRUCCIÓN BLINDADA SANTYMINII --- */
+/* --- RECONSTRUCCIÓN BLINDADA SANTYMINII + FIX GIGANTE --- */
 
 @font-face {
     font-family: 'LD Slender';
@@ -12,7 +12,7 @@
     font-display: swap;
 }
 
-/* Base del sitio - Recuperamos el fondo y el color */
+/* Base del sitio */
 body {
     font-family: 'LD Slender', sans-serif !important;
     margin: 0 !important;
@@ -33,7 +33,7 @@ header {
     border-bottom: 2px solid #ff9999 !important;
 }
 
-/* --- FIX DEL ANCHO: Esto evita que se vea pequeño --- */
+/* Fix del ancho */
 .container { 
     width: 90% !important;
     max-width: 1100px !important; 
@@ -49,17 +49,17 @@ header {
     backdrop-filter: blur(5px) !important;
 }
 
-/* --- BOTÓN DE DISCORD (FLOTANTE CON BORDE) --- */
+/* Botón de Discord flotante */
 .discord-estatico {
-    position: fixed !important;   /* Te sigue al scrollear */
+    position: fixed !important;
     bottom: 30px !important;
     left: 30px !important;
-    z-index: 9999 !important;     /* Por encima de todo */
+    z-index: 9999 !important;
     background-color: #5865f2 !important;
     color: white !important;
     padding: 15px 25px !important;
     border-radius: 10px !important;
-    border: 3px solid #ffffff !important; /* El borde blanco que pediste */
+    border: 3px solid #ffffff !important;
     font-family: 'LD Slender', sans-serif !important;
     font-size: 1.3rem !important;
     text-decoration: none !important;
@@ -70,18 +70,18 @@ header {
 
 .discord-estatico:hover {
     transform: scale(1.1) !important;
-    background-color: #4752c4 !important;
+    background-color: #646fe7 !important;
 }
 
-/* --- FEEDBACK (ORDENADO Y BONITO) --- */
+/* --- FEEDBACK GIGANTE (ACTUALIZADO) --- */
 .formulario-feedback {
     display: flex !important;
-    flex-direction: column !important; /* Forza el orden vertical */
+    flex-direction: column !important;
     align-items: center !important;
     gap: 20px !important;
     margin: 40px auto !important;
     width: 100% !important;
-    max-width: 600px !important;
+    max-width: 800px !important; /* Un poco más ancho para los inputs grandes */
 }
 
 .titulo-dlc {
@@ -91,38 +91,64 @@ header {
     text-align: center !important;
 }
 
+/* Ajuste masivo para Inputs y Textareas */
 .formulario-feedback input, 
-.formulario-feedback textarea {
+.formulario-feedback textarea,
+.feedback-form input,
+.feedback-form textarea {
     width: 100% !important;
     background: #0d1117 !important;
-    border: 1px solid #990000 !important;
+    border: 2px solid #990000 !important;
     border-radius: 8px !important;
-    padding: 15px !important;
+    padding: 20px !important; /* Más espacio interno */
     color: white !important;
     font-family: 'LD Slender', sans-serif !important;
-    font-size: 1.2rem !important;
+    font-size: 2rem !important; /* Texto de escritura muy grande */
     box-sizing: border-box !important;
+    outline: none !important;
 }
 
-.formulario-feedback button {
+.formulario-feedback textarea,
+.feedback-form textarea {
+    height: 300px !important; /* Espacio de sobra para el feedback */
+    resize: none !important;
+}
+
+/* Agigantar los Placeholders (el texto guía) */
+.formulario-feedback input::placeholder, 
+.formulario-feedback textarea::placeholder,
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+    font-size: 1.8rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.formulario-feedback button,
+.btn-enviar {
     width: 100% !important;
     background-color: #990000 !important;
     color: white !important;
-    padding: 15px !important;
+    padding: 20px !important;
     border-radius: 8px !important;
     font-family: 'Eordeoghlakat', serif !important;
-    font-size: 2.5rem !important;
+    font-size: 3rem !important; /* Botón imponente */
     cursor: pointer !important;
     border: none !important;
+    transition: 0.3s !important;
+}
+
+.formulario-feedback button:hover,
+.btn-enviar:hover {
+    background-color: #ff0000 !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4) !important;
 }
 
 /* Imágenes */
 .contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .img-proyecto { width: 100%; max-width: 500px; border: 1px solid #30363d; border-radius: 10px; }
 
-/* --- AJUSTES PARA CELULARES (RESPONSIVE) --- */
+/* --- AJUSTES PARA CELULARES (RESPONSIVE ACTUALIZADO) --- */
 @media (max-width: 768px) {
-    /* Hacemos que la caja use casi todo el ancho de la pantalla */
     .container {
         width: 95% !important;
         padding: 10px !important;
@@ -130,46 +156,43 @@ header {
     }
 
     .card {
-        padding: 20px !important; /* Menos espacio interno para que quepa el texto */
+        padding: 20px !important;
     }
 
-    /* Bajamos el tamaño de los títulos para que no se corten */
     h1 {
         font-size: 30px !important;
     }
 
     .titulo-dlc {
-        font-size: 35px !important; /* El título rojo gigante ahora cabe en el móvil */
+        font-size: 35px !important;
         line-height: 1.1 !important;
     }
 
-    h3 {
-        font-size: 28px !important;
+    /* Inputs en móvil un poco más ajustados pero aún grandes */
+    .formulario-feedback input, 
+    .formulario-feedback textarea,
+    .feedback-form input,
+    .feedback-form textarea {
+        font-size: 1.5rem !important;
+        padding: 15px !important;
+    }
+
+    .formulario-feedback input::placeholder, 
+    .formulario-feedback textarea::placeholder {
+        font-size: 1.3rem !important;
+    }
+
+    .btn-enviar, .formulario-feedback button {
+        font-size: 2rem !important;
+        height: auto !important;
     }
 
     p {
-        font-size: 18px !important; /* Texto de lectura cómodo para celular */
+        font-size: 18px !important;
         line-height: 1.5 !important;
     }
 
-    /* Centramos todo el contenido */
     header, .card, .formulario-feedback {
         text-align: center !important;
-    }
-
-    /* Ajustamos el formulario para que los cuadros no se salgan */
-    .form-group input, 
-    .form-group textarea {
-        width: 100% !important;
-        font-size: 18px !important;
-        height: auto !important;
-        padding: 15px !important;
-        box-sizing: border-box !important; /* Evita que el padding ensanche el cuadro */
-    }
-
-    .btn-enviar {
-        width: 100% !important;
-        font-size: 25px !important;
-        height: 60px !important;
     }
 }
