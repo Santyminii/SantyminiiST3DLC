@@ -196,3 +196,63 @@ footer {
 .fila-inferior .img-proyecto {
     width: 45%; 
 }
+
+/* --- NUEVOS ESTILOS PARA EL FORMULARIO DE FEEDBACK --- */
+
+.formulario-feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto 10px;
+}
+
+.formulario-feedback input, 
+.formulario-feedback textarea {
+    background: rgba(13, 17, 23, 0.6); /* Transparencia como el header */
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 15px;
+    color: white;
+    font-family: 'LD Slender', sans-serif;
+    font-size: 1.2rem;
+    backdrop-filter: blur(4px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-feedback input:focus, 
+.formulario-feedback textarea:focus {
+    outline: none;
+    border-color: #444cf7; /* Azul neón para enfoque */
+    box-shadow: 0 0 12px rgba(68, 76, 247, 0.4);
+}
+
+.formulario-feedback textarea {
+    height: 150px;
+    resize: none;
+}
+
+.formulario-feedback button {
+    background-color: #990000; /* Rojo oscuro de los títulos */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px;
+    border-radius: 8px;
+    font-family: 'Eordeoghlakat', serif;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-feedback button:hover {
+    background-color: #7b0101;
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(153, 0, 0, 0.6);
+}
+
+.formulario-feedback button:disabled {
+    background-color: #161b22;
+    color: #484f58;
+    cursor: not-allowed;
+    transform: none;
+}
