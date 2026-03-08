@@ -1,237 +1,175 @@
-/* --- ESTILO CON TEXTO AGIGANTADO --- */
+/* --- RECONSTRUCCIÓN BLINDADA SANTYMINII --- */
 
 @font-face {
     font-family: 'LD Slender';
     src: url('ldslender.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Eordeoghlakat';
     src: url('Eordeoghlakat.ttf');
+    font-display: swap;
 }
 
+/* Base del sitio - Recuperamos el fondo y el color */
 body {
-    font-family: 'LD Slender', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('Background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: #000;
-    color: white;
-    font-size: 28px !important;
-    font-weight: bold !important;
+    font-family: 'LD Slender', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url('Background.jpg') !important; 
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-color: #000 !important; 
+    color: white !important;
+    width: 100% !important;
 }
 
-header h1 {
-    font-size: 60px !important;
-    font-weight: bold !important;
-    margin-bottom: 10px;
+header {
+    background: rgba(13, 17, 23, 0.8) !important;
+    padding: 50px 20px !important;
+    text-align: center !important;
+    border-bottom: 2px solid #ff9999 !important;
 }
 
-header p {
-    font-size: 32px !important;
-    font-weight: bold !important;
-}
-
-.container {
-    max-width: 1200px !important;
-    margin: 40px auto;
-    padding: 0 20px;
+/* --- FIX DEL ANCHO: Esto evita que se vea pequeño --- */
+.container { 
+    width: 90% !important;
+    max-width: 1100px !important; 
+    margin: 30px auto !important; 
+    display: block !important;
 }
 
 .card {
-    background: rgba(22, 27, 34, 0.85);
-    padding: 50px !important;
-    border-radius: 15px;
-    border: 1px solid #30363d;
+    background: rgba(22, 27, 34, 0.9) !important;
+    padding: 40px !important; 
+    border-radius: 15px !important;
+    border: 1px solid #30363d !important;
+    backdrop-filter: blur(5px) !important;
 }
 
-/* Títulos de Terror masivos */
+/* --- BOTÓN DE DISCORD (FLOTANTE CON BORDE) --- */
+.discord-estatico {
+    position: fixed !important;   /* Te sigue al scrollear */
+    bottom: 30px !important;
+    left: 30px !important;
+    z-index: 9999 !important;     /* Por encima de todo */
+    background-color: #5865f2 !important;
+    color: white !important;
+    padding: 15px 25px !important;
+    border-radius: 10px !important;
+    border: 3px solid #ffffff !important; /* El borde blanco que pediste */
+    font-family: 'LD Slender', sans-serif !important;
+    font-size: 1.3rem !important;
+    text-decoration: none !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.8) !important;
+    display: inline-block !important;
+    transition: 0.3s !important;
+}
+
+.discord-estatico:hover {
+    transform: scale(1.1) !important;
+    background-color: #4752c4 !important;
+}
+
+/* --- FEEDBACK (ORDENADO Y BONITO) --- */
+.formulario-feedback {
+    display: flex !important;
+    flex-direction: column !important; /* Forza el orden vertical */
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 40px auto !important;
+    width: 100% !important;
+    max-width: 600px !important;
+}
+
 .titulo-dlc {
     font-family: 'Eordeoghlakat', serif !important;
-    color: #990000;
-    text-align: center;
-    font-size: 80px !important;
-    margin-bottom: 40px;
+    color: #990000 !important;
+    font-size: 4rem !important;
+    text-align: center !important;
 }
 
-/* Subtítulos */
-h3 {
-    color: #ff9999;
-    font-size: 52px !important;
-    font-weight: bold !important;
-    margin-top: 30px;
+.formulario-feedback input, 
+.formulario-feedback textarea {
+    width: 100% !important;
+    background: #0d1117 !important;
+    border: 1px solid #990000 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    color: white !important;
+    font-family: 'LD Slender', sans-serif !important;
+    font-size: 1.2rem !important;
+    box-sizing: border-box !important;
 }
 
-/* Párrafos de información */
-p {
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-size: 30px !important;
-    font-weight: bold !important;
-}
-
-/* Link de Youtube */
-a {
-    font-size: 26px !important;
-    color: #588bf2;
+.formulario-feedback button {
+    width: 100% !important;
+    background-color: #990000 !important;
+    color: white !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    font-family: 'Eordeoghlakat', serif !important;
+    font-size: 2.5rem !important;
+    cursor: pointer !important;
+    border: none !important;
 }
 
 /* Imágenes */
-.img-proyecto {
-    width: 100%;
-    max-width: 800px !important;
-    border: 2px solid #30363d;
-    border-radius: 10px;
-}
+.contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.img-proyecto { width: 100%; max-width: 500px; border: 1px solid #30363d; border-radius: 10px; }
 
-/* Discord Flotante con Borde */
-.discord-estatico {
-    position: fixed;
-    bottom: 25px;
-    left: 25px;
-    z-index: 1000;
-    background-color: #5865f2;
-    color: white;
-    padding: 20px 30px !important;
-    border-radius: 12px;
-    border: 3px solid white !important;
-    font-size: 26px !important;
-    font-weight: bold !important;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-/* ──────────────────────────────────────────────
-   Mejoras para el formulario - vibe apocalíptica
-   ────────────────────────────────────────────── */
-
-.formulario-feedback {
-    margin-top: 60px;
-    padding: 40px;
-    background: linear-gradient(135deg, rgba(20, 20, 25, 0.92), rgba(30, 10, 10, 0.88));
-    border-radius: 16px;
-    border: 1px solid #4a0000;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7),
-                inset 0 0 15px rgba(180, 0, 0, 0.12);
-}
-
-.formulario-feedback h3 {
-    margin-top: 0;
-    font-size: 48px;
-    color: #ff5555;
-    text-shadow: 0 0 15px rgba(255, 80, 80, 0.6);
-    letter-spacing: 1px;
-}
-
-.form-subtitle {
-    font-size: 24px !important;
-    color: #d0d0d0;
-    margin: 10px 0 35px;
-    font-weight: normal !important;
-    opacity: 0.9;
-}
-
-/* Formulario */
-.feedback-form {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-group label {
-    font-size: 22px;
-    color: #ffaaaa;
-    opacity: 0.9;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    background: rgba(15, 15, 20, 0.8);
-    border: 1px solid #550000;
-    border-radius: 10px;
-    padding: 16px 20px;
-    color: #eee;
-    font-size: 22px;
-    font-family: 'LD Slender', sans-serif;
-    transition: all 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #ff4444;
-    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.25);
-    background: rgba(25, 20, 20, 0.9);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 140px;
-}
-
-/* Botón mejorado */
-.btn-enviar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
-    padding: 18px 40px;
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(90deg, #a50000, #d40000);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 6px 20px rgba(200, 0, 0, 0.4);
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-enviar:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(220, 0, 0, 0.55);
-    background: linear-gradient(90deg, #c00000, #ff1a1a);
-}
-
-.btn-enviar:active {
-    transform: translateY(1px);
-}
-
-.btn-enviar svg {
-    width: 28px;
-    height: 28px;
-    stroke: white;
-}
-
-/* Mensaje de estado */
-#my-form-status {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 22px;
-    min-height: 28px;
-}
-
-/* Responsivo básico */
+/* --- AJUSTES PARA CELULARES (RESPONSIVE) --- */
 @media (max-width: 768px) {
-    .formulario-feedback {
-        padding: 30px 20px;
+    /* Hacemos que la caja use casi todo el ancho de la pantalla */
+    .container {
+        width: 95% !important;
+        padding: 10px !important;
+        margin: 10px auto !important;
     }
-    
+
+    .card {
+        padding: 20px !important; /* Menos espacio interno para que quepa el texto */
+    }
+
+    /* Bajamos el tamaño de los títulos para que no se corten */
+    h1 {
+        font-size: 30px !important;
+    }
+
+    .titulo-dlc {
+        font-size: 35px !important; /* El título rojo gigante ahora cabe en el móvil */
+        line-height: 1.1 !important;
+    }
+
+    h3 {
+        font-size: 28px !important;
+    }
+
+    p {
+        font-size: 18px !important; /* Texto de lectura cómodo para celular */
+        line-height: 1.5 !important;
+    }
+
+    /* Centramos todo el contenido */
+    header, .card, .formulario-feedback {
+        text-align: center !important;
+    }
+
+    /* Ajustamos el formulario para que los cuadros no se salgan */
+    .form-group input, 
+    .form-group textarea {
+        width: 100% !important;
+        font-size: 18px !important;
+        height: auto !important;
+        padding: 15px !important;
+        box-sizing: border-box !important; /* Evita que el padding ensanche el cuadro */
+    }
+
     .btn-enviar {
-        padding: 16px 30px;
-        font-size: 24px;
+        width: 100% !important;
+        font-size: 25px !important;
+        height: 60px !important;
     }
 }
