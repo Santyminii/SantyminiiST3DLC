@@ -78,83 +78,10 @@ header p {
     margin-bottom: 25px;
 }
 
-.titulo-dlc span {
-    color: white; 
-}
-
-.centrado {
-    color: #ffffff; 
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 6rem; 
-    display: block; 
-    text-shadow: 2px 2px 10px rgba(68, 76, 247, 0.4);
-}
-
-.subtitulo-seccion {
-    color: #ffffff; 
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 3.5rem; 
-    display: block;
-    text-shadow: 2px 2px 8px rgba(68, 76, 247, 0.3);
-}
-
 .card p, .texto {
     font-family: 'LD Slender', sans-serif;
     font-size: 1.5rem;
     line-height: 1.6;
-}
-
-.texto {
-    text-align: center;
-    color: #e6edf3;
-    margin-bottom: 20px;
-}
-
-.link-youtube {
-    color: #444cf7; 
-    text-decoration: none; 
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.link-youtube:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #444cf7;
-    text-decoration: underline;
-}
-
-footer { 
-    text-align: center; 
-    padding: 20px; 
-    color: #ffffff; 
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.5rem;
-}
-
-.discord-estatico {
-    position: fixed; 
-    bottom: 20px;    
-    left: 20px;      
-    z-index: 100;    
-    
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(88, 101, 242, 0.8); 
-    padding: 15px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: 1px solid #ffffff;
-    transition: 0.3s;
-    backdrop-filter: blur(8px);
-}
-
-.discord-estatico:hover {
-    background-color: #5865f2; 
-    transform: scale(1.05);    
-    box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
 }
 
 .contenedor-triangulo {
@@ -165,19 +92,6 @@ footer {
     margin-top: 30px;
 }
 
-.fila-superior {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
-    width: 100%;
-}
-
-.fila-inferior {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
 .img-proyecto {
     width: 45%; 
     max-width: 400px;
@@ -185,14 +99,12 @@ footer {
     border: 2px solid #30363d;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
 }
 
-.img-proyecto:hover {
-    transform: scale(1.05);
-    border-color: #7b0101;
-}
-
-.fila-inferior .img-proyecto {
-    width: 45%; 
+footer { 
+    text-align: center; 
+    padding: 20px; 
+    color: #ffffff; 
+    font-family: 'LD Slender', sans-serif;
+    font-size: 1.5rem;
 }
