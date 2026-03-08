@@ -73,7 +73,62 @@ header {
     background-color: #646fe7 !important;
 }
 
-/* --- FEEDBACK GIGANTE (ACTUALIZADO) --- */
+/* --- BARRA DE PROGRESO APOCALÍPTICA --- */
+.contenedor-progreso {
+    width: 100% !important;
+    max-width: 800px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid #333 !important;
+    border-radius: 50px !important;
+    margin: 20px auto 40px auto !important;
+    height: 40px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.barra-progreso {
+    width: 15% !important; /* Ajusta este valor según el avance */
+    height: 100% !important;
+    background: linear-gradient(90deg, #660000, #ff0000) !important;
+    border-radius: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    animation: brillo-pulso 2s infinite alternate !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6) !important;
+}
+
+.barra-progreso::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent) !important;
+    animation: barrido-luz 3s infinite !important;
+}
+
+.porcentaje-texto {
+    font-family: 'LD Slender', sans-serif !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    z-index: 2 !important;
+}
+
+@keyframes brillo-pulso {
+    from { box-shadow: 0 0 10px #990000; }
+    to { box-shadow: 0 0 25px #ff4444; }
+}
+
+@keyframes barrido-luz {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* --- FEEDBACK GIGANTE --- */
 .formulario-feedback {
     display: flex !important;
     flex-direction: column !important;
@@ -81,7 +136,7 @@ header {
     gap: 20px !important;
     margin: 40px auto !important;
     width: 100% !important;
-    max-width: 800px !important; /* Un poco más ancho para los inputs grandes */
+    max-width: 800px !important;
 }
 
 .titulo-dlc {
@@ -91,7 +146,6 @@ header {
     text-align: center !important;
 }
 
-/* Ajuste masivo para Inputs y Textareas */
 .formulario-feedback input, 
 .formulario-feedback textarea,
 .feedback-form input,
@@ -100,21 +154,20 @@ header {
     background: #0d1117 !important;
     border: 2px solid #990000 !important;
     border-radius: 8px !important;
-    padding: 20px !important; /* Más espacio interno */
+    padding: 20px !important;
     color: white !important;
     font-family: 'LD Slender', sans-serif !important;
-    font-size: 2rem !important; /* Texto de escritura muy grande */
+    font-size: 2rem !important;
     box-sizing: border-box !important;
     outline: none !important;
 }
 
 .formulario-feedback textarea,
 .feedback-form textarea {
-    height: 300px !important; /* Espacio de sobra para el feedback */
+    height: 300px !important;
     resize: none !important;
 }
 
-/* Agigantar los Placeholders (el texto guía) */
 .formulario-feedback input::placeholder, 
 .formulario-feedback textarea::placeholder,
 .feedback-form input::placeholder,
@@ -131,7 +184,7 @@ header {
     padding: 20px !important;
     border-radius: 8px !important;
     font-family: 'Eordeoghlakat', serif !important;
-    font-size: 3rem !important; /* Botón imponente */
+    font-size: 3rem !important;
     cursor: pointer !important;
     border: none !important;
     transition: 0.3s !important;
@@ -147,7 +200,7 @@ header {
 .contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .img-proyecto { width: 100%; max-width: 500px; border: 1px solid #30363d; border-radius: 10px; }
 
-/* --- AJUSTES PARA CELULARES (RESPONSIVE ACTUALIZADO) --- */
+/* --- AJUSTES PARA CELULARES --- */
 @media (max-width: 768px) {
     .container {
         width: 95% !important;
@@ -168,23 +221,19 @@ header {
         line-height: 1.1 !important;
     }
 
-    /* Inputs en móvil un poco más ajustados pero aún grandes */
     .formulario-feedback input, 
-    .formulario-feedback textarea,
-    .feedback-form input,
-    .feedback-form textarea {
+    .formulario-feedback textarea {
         font-size: 1.5rem !important;
         padding: 15px !important;
     }
 
-    .formulario-feedback input::placeholder, 
-    .formulario-feedback textarea::placeholder {
-        font-size: 1.3rem !important;
+    .contenedor-progreso {
+        width: 90% !important;
+        height: 35px !important;
     }
 
     .btn-enviar, .formulario-feedback button {
         font-size: 2rem !important;
-        height: auto !important;
     }
 
     p {
