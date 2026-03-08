@@ -1,4 +1,4 @@
-/* --- RECONSTRUCCIÓN TOTAL DEL SITIO --- */
+/* --- RECONSTRUCCIÓN FINAL DEL SISTEMA --- */
 
 @font-face {
     font-family: 'LD Slender';
@@ -51,18 +51,19 @@ header {
     color: #990000; 
     font-size: 3.5rem; 
     text-align: center;
+    margin-bottom: 25px;
 }
 
-/* --- ESTILOS DEL FORMULARIO (SISTEMA BLINDADO) --- */
+/* --- FORMULARIO DE FEEDBACK (CORREGIDO Y ALINEADO) --- */
 
 .formulario-feedback {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column !important; /* Forza el orden de arriba hacia abajo */
     align-items: center !important;
     gap: 20px !important;
     width: 100% !important;
-    max-width: 600px !important;
-    margin: 40px auto !important;
+    max-width: 500px !important;
+    margin: 30px auto !important;
 }
 
 .formulario-feedback input, 
@@ -75,19 +76,24 @@ header {
     color: white !important;
     font-family: 'LD Slender', sans-serif !important;
     font-size: 1.2rem !important;
-    box-sizing: border-box !important;
+    box-sizing: border-box !important; /* Crucial para que no se deforme */
+}
+
+.formulario-feedback textarea {
+    height: 150px !important;
+    resize: none !important;
 }
 
 .formulario-feedback button {
     width: 100% !important;
     background-color: #990000 !important;
     color: white !important;
-    padding: 15px !important;
+    border: none !important;
+    padding: 18px !important;
     border-radius: 8px !important;
     font-family: 'Eordeoghlakat', serif !important;
     font-size: 2.2rem !important;
     cursor: pointer !important;
-    border: none !important;
     transition: 0.3s !important;
 }
 
@@ -96,6 +102,22 @@ header {
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5) !important;
 }
 
-/* Imágenes */
-.contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.img-proyecto { width: 100%; max-width: 400px; border: 1px solid #30363d; border-radius: 8px; }
+/* Imágenes del Proyecto */
+.contenedor-triangulo { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.img-proyecto { 
+    width: 100%; 
+    max-width: 400px; 
+    border: 1px solid #30363d; 
+    border-radius: 8px; 
+    transition: 0.3s;
+}
+
+.img-proyecto:hover {
+    transform: scale(1.05);
+}
