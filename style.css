@@ -1,4 +1,4 @@
-/* --- ESTILO RECONSTRUIDO: DISCORD FLOTANTE + FEEDBACK --- */
+/* --- BLINDAJE FINAL: ANCHO TOTAL, DISCORD Y FEEDBACK --- */
 
 @font-face {
     font-family: 'LD Slender';
@@ -22,19 +22,15 @@ body {
     background-attachment: fixed;
     background-color: #000; 
     color: white;
+    width: 100%;
+    overflow-x: hidden; /* Evita que la página se mueva hacia los lados */
 }
 
-header {
-    background: rgba(13, 17, 23, 0.7);
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 2px solid #ff9999;
-    backdrop-filter: blur(8px);
-}
-
+/* Contenedor principal: ¡Aquí es donde recuperamos el tamaño! */
 .container { 
-    max-width: 900px; 
-    margin: 20px auto; 
+    width: 95% !important;
+    max-width: 1000px !important; /* Ancho ideal para que no se vea pequeño */
+    margin: 40px auto !important; 
     padding: 0 20px; 
 }
 
@@ -44,100 +40,84 @@ header {
     border-radius: 12px;
     border: 1px solid #30363d;
     backdrop-filter: blur(4px);
-    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Títulos */
-.titulo-dlc {
-    font-family: 'Eordeoghlakat', serif !important;
-    color: #990000;
-    text-align: center;
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-/* --- BOTÓN DE DISCORD FLOTANTE (REPARADO) --- */
+/* --- BOTÓN DE DISCORD FLOTANTE CON BORDE --- */
 .discord-estatico {
-    position: fixed;   /* Se mantiene siguiendo la pantalla al scrollear */
-    bottom: 20px;    
-    left: 20px;      
-    z-index: 1000;    
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.2rem;
-    color: #ffffff !important;
-    background-color: rgba(88, 101, 242, 0.9); 
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: 2px solid #ffffff; /* El borde que recordabas */
-    transition: 0.3s ease-in-out;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    position: fixed !important;
+    bottom: 25px !important;
+    left: 25px !important;
+    z-index: 9999 !important;
+    background-color: #5865f2 !important;
+    color: white !important;
+    padding: 15px 25px !important;
+    border-radius: 10px !important;
+    border: 2px solid #ffffff !important; /* El borde blanco que pediste */
+    font-family: 'LD Slender', sans-serif !important;
+    font-size: 1.3rem !important;
+    text-decoration: none !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6) !important;
+    transition: 0.3s !important;
+    display: block !important;
 }
 
 .discord-estatico:hover {
-    background-color: #5865f2; 
-    transform: scale(1.1);    
-    box-shadow: 0 0 20px rgba(88, 101, 242, 0.8);
+    transform: scale(1.1) !important;
+    background-color: #4752c4 !important;
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.8) !important;
 }
 
-/* --- FORMULARIO DE FEEDBACK (DISEÑO BONITO) --- */
+/* --- FORMULARIO DE FEEDBACK ESTÉTICO --- */
 .formulario-feedback {
     display: flex !important;
-    flex-direction: column !important; /* Orden vertical */
+    flex-direction: column !important;
     align-items: center !important;
     gap: 20px !important;
     margin: 40px auto !important;
-    max-width: 500px;
-    width: 100%;
+    width: 100% !important;
+    max-width: 600px !important;
+}
+
+.titulo-dlc {
+    font-family: 'Eordeoghlakat', serif !important;
+    color: #990000 !important;
+    font-size: 4rem !important;
+    text-align: center;
 }
 
 .formulario-feedback input, 
 .formulario-feedback textarea {
     width: 100% !important;
-    background: rgba(13, 17, 23, 0.8) !important;
-    border: 1px solid #990000 !important; /* Borde rojo sangre */
+    background: rgba(13, 17, 23, 0.9) !important;
+    border: 1px solid #990000 !important;
     border-radius: 8px;
-    padding: 15px;
-    color: white;
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.2rem;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-
-.formulario-feedback input:focus, 
-.formulario-feedback textarea:focus {
-    outline: none;
-    border-color: #ff0000 !important;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-}
-
-.formulario-feedback textarea {
-    height: 120px;
-    resize: none;
+    padding: 18px !important;
+    color: white !important;
+    font-family: 'LD Slender', sans-serif !important;
+    font-size: 1.3rem !important;
+    box-sizing: border-box !important;
 }
 
 .formulario-feedback button {
-    width: 100%;
-    background-color: #990000;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    font-family: 'Eordeoghlakat', serif;
-    font-size: 2.2rem;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: 0.4s;
-    text-transform: uppercase;
+    width: 100% !important;
+    background-color: #990000 !important;
+    color: white !important;
+    padding: 18px !important;
+    border-radius: 8px !important;
+    font-family: 'Eordeoghlakat', serif !important;
+    font-size: 2.2rem !important;
+    cursor: pointer !important;
+    border: 2px solid transparent !important;
+    transition: 0.3s !important;
 }
 
 .formulario-feedback button:hover {
-    background-color: #7b0101;
-    border-color: white;
-    box-shadow: 0 0 20px rgba(153, 0, 0, 0.6);
+    background-color: #7b0101 !important;
+    border-color: white !important;
 }
 
-/* Imágenes */
+/* Ajuste de imágenes para que no rompan el layout */
 .contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.img-proyecto { width: 100%; max-width: 400px; border: 1px solid #30363d; border-radius: 8px; }
+.img-proyecto { width: 100%; max-width: 500px; border-radius: 8px; border: 1px solid #30363d; }
