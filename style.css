@@ -1,4 +1,4 @@
-/* --- REPARACIÓN DE EMERGENCIA SANTYMINII --- */
+/* --- ESTILO RECONSTRUIDO: DISCORD + FORMULARIO --- */
 
 @font-face {
     font-family: 'LD Slender';
@@ -13,57 +13,79 @@
 }
 
 body {
-    font-family: 'LD Slender', sans-serif !important;
+    font-family: 'LD Slender', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('Background.jpg') !important; 
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-color: #000 !important; 
-    color: white !important;
+    background-image: url('Background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #000; 
+    color: white;
 }
 
 header {
-    background: rgba(13, 17, 23, 0.7) !important;
+    background: rgba(13, 17, 23, 0.7);
     padding: 60px 20px;
     text-align: center;
-    border-bottom: 2px solid hsl(0, 100%, 76%);
+    border-bottom: 2px solid #ff9999;
     backdrop-filter: blur(8px);
 }
 
 .container { 
     max-width: 900px; 
-    margin: 20px auto !important; 
+    margin: 20px auto; 
     padding: 0 20px; 
 }
 
 .card {
-    background: rgba(22, 27, 34, 0.85) !important;
-    padding: 40px !important; 
+    background: rgba(22, 27, 34, 0.85);
+    padding: 40px; 
     border-radius: 12px;
     border: 1px solid #30363d;
     backdrop-filter: blur(4px);
 }
 
-.titulo-dlc {
+/* Títulos con tu fuente de terror */
+.titulo-dlc, .centrado {
     font-family: 'Eordeoghlakat', serif !important;
-    color: #990000 !important; 
-    font-size: 3.5rem !important; 
-    text-align: center !important;
-    margin-bottom: 20px;
+    text-align: center;
+    color: #990000;
 }
 
-/* --- FIX DEL FORMULARIO: ORDEN VERTICAL --- */
+/* --- BOTÓN DE DISCORD (EL QUE SE HABÍA ROTO) --- */
+.discord-estatico {
+    position: fixed; 
+    bottom: 20px;    
+    left: 20px;      
+    z-index: 100;    
+    font-family: 'LD Slender', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff !important;
+    background-color: rgba(88, 101, 242, 0.8); 
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    transition: 0.3s;
+    backdrop-filter: blur(8px);
+    display: block;
+}
 
+.discord-estatico:hover {
+    background-color: #5865f2; 
+    transform: scale(1.05);    
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
+}
+
+/* --- FORMULARIO ORDENADO --- */
 .formulario-feedback {
     display: flex !important;
-    flex-direction: column !important; /* Forza uno debajo del otro */
-    align-items: center !important;    /* Centra horizontalmente */
-    gap: 20px !important;              /* Espacio entre campos */
-    width: 100% !important;
-    max-width: 500px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
     margin: 40px auto !important;
+    max-width: 500px;
 }
 
 .formulario-feedback input, 
@@ -72,35 +94,31 @@ header {
     background: rgba(13, 17, 23, 0.9) !important;
     border: 1px solid #444cf7 !important;
     border-radius: 8px;
-    padding: 15px !important;
-    color: white !important;
-    font-family: 'LD Slender', sans-serif !important;
-    font-size: 1.2rem !important;
-    box-sizing: border-box !important; /* Evita que se salgan de la caja */
-}
-
-.formulario-feedback textarea {
-    height: 150px !important;
-    resize: none !important;
+    padding: 15px;
+    color: white;
+    font-family: 'LD Slender', sans-serif;
+    font-size: 1.2rem;
+    box-sizing: border-box;
 }
 
 .formulario-feedback button {
-    width: 100% !important;
-    background-color: #990000 !important;
-    color: white !important;
-    padding: 15px !important;
-    border-radius: 8px !important;
-    font-family: 'Eordeoghlakat', serif !important;
-    font-size: 2.2rem !important;
-    cursor: pointer !important;
-    border: none !important;
-    transition: 0.3s !important;
+    width: 100%;
+    background-color: #990000;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Eordeoghlakat', serif;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
 }
 
 .formulario-feedback button:hover {
-    background-color: #ff0000 !important;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5) !important;
+    background-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
+/* Imágenes */
 .contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .img-proyecto { width: 100%; max-width: 400px; border: 1px solid #30363d; border-radius: 8px; }
