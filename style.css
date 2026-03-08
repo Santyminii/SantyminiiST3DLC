@@ -1,3 +1,5 @@
+/* --- ESTILO RECONSTRUIDO: DISCORD FLOTANTE + FEEDBACK --- */
+
 @font-face {
     font-family: 'LD Slender';
     src: url('ldslender.ttf');
@@ -11,188 +13,131 @@
 }
 
 body {
-    font-family: 'LD Slender', 'Segoe UI', Arial, sans-serif;
+    font-family: 'LD Slender', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('Background.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
     background-color: #000; 
     color: white;
 }
 
 header {
     background: rgba(13, 17, 23, 0.7);
-    color: white;
     padding: 60px 20px;
     text-align: center;
-    border-bottom: 2px solid hsl(0, 100%, 76%);
+    border-bottom: 2px solid #ff9999;
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    position: relative;
-    z-index: 2; 
-}
-
-header h1 { 
-    font-family: 'LD Slender', sans-serif;
-    margin: 0; 
-    font-size: 4rem; 
-    text-shadow: 0 0 15px rgba(247, 68, 68, 0.7);
-}
-
-header p {
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.8rem; 
-    margin-top: 10px;
-    color: #e6edf3;
 }
 
 .container { 
     max-width: 900px; 
-    margin: -25px auto 40px; 
+    margin: 20px auto; 
     padding: 0 20px; 
-    position: relative;
-    z-index: 1; 
 }
 
 .card {
     background: rgba(22, 27, 34, 0.85);
-    padding: 50px; 
+    padding: 40px; 
     border-radius: 12px;
     border: 1px solid #30363d;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
+    position: relative;
 }
 
-.titulo-dlc, .centrado, .subtitulo-seccion {
-    font-family: 'Eordeoghlakat', serif !important;
-    text-align: center;
-}
-
+/* Títulos */
 .titulo-dlc {
-    color: #990000; 
-    font-size: 3.5rem; 
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-.titulo-dlc span {
-    color: white; 
-}
-
-.centrado {
-    color: #ffffff; 
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 6rem; 
-    display: block; 
-    text-shadow: 2px 2px 10px rgba(68, 76, 247, 0.4);
-}
-
-.subtitulo-seccion {
-    color: #ffffff; 
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 3.5rem; 
-    display: block;
-    text-shadow: 2px 2px 8px rgba(68, 76, 247, 0.3);
-}
-
-.card p, .texto {
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
-.texto {
+    font-family: 'Eordeoghlakat', serif !important;
+    color: #990000;
     text-align: center;
-    color: #e6edf3;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
-.link-youtube {
-    color: #444cf7; 
-    text-decoration: none; 
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.link-youtube:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #444cf7;
-    text-decoration: underline;
-}
-
-footer { 
-    text-align: center; 
-    padding: 20px; 
-    color: #ffffff; 
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.5rem;
-}
-
+/* --- BOTÓN DE DISCORD FLOTANTE (REPARADO) --- */
 .discord-estatico {
-    position: fixed; 
+    position: fixed;   /* Se mantiene siguiendo la pantalla al scrollear */
     bottom: 20px;    
     left: 20px;      
-    z-index: 100;    
-    
+    z-index: 1000;    
     font-family: 'LD Slender', sans-serif;
     font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(88, 101, 242, 0.8); 
-    padding: 15px 15px;
+    color: #ffffff !important;
+    background-color: rgba(88, 101, 242, 0.9); 
+    padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
-    border: 1px solid #ffffff;
-    transition: 0.3s;
+    border: 2px solid #ffffff; /* El borde que recordabas */
+    transition: 0.3s ease-in-out;
     backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 .discord-estatico:hover {
     background-color: #5865f2; 
-    transform: scale(1.05);    
-    box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
+    transform: scale(1.1);    
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.8);
 }
 
-.contenedor-triangulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
-    margin-top: 30px;
-}
-
-.fila-superior {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
+/* --- FORMULARIO DE FEEDBACK (DISEÑO BONITO) --- */
+.formulario-feedback {
+    display: flex !important;
+    flex-direction: column !important; /* Orden vertical */
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 40px auto !important;
+    max-width: 500px;
     width: 100%;
 }
 
-.fila-inferior {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.img-proyecto {
-    width: 45%; 
-    max-width: 400px;
-    height: auto;
-    border: 2px solid #30363d;
+.formulario-feedback input, 
+.formulario-feedback textarea {
+    width: 100% !important;
+    background: rgba(13, 17, 23, 0.8) !important;
+    border: 1px solid #990000 !important; /* Borde rojo sangre */
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
+    padding: 15px;
+    color: white;
+    font-family: 'LD Slender', sans-serif;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    transition: 0.3s;
 }
 
-.img-proyecto:hover {
-    transform: scale(1.05);
-    border-color: #7b0101;
+.formulario-feedback input:focus, 
+.formulario-feedback textarea:focus {
+    outline: none;
+    border-color: #ff0000 !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
-.fila-inferior .img-proyecto {
-    width: 45%; 
+.formulario-feedback textarea {
+    height: 120px;
+    resize: none;
 }
+
+.formulario-feedback button {
+    width: 100%;
+    background-color: #990000;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Eordeoghlakat', serif;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+
+.formulario-feedback button:hover {
+    background-color: #7b0101;
+    border-color: white;
+    box-shadow: 0 0 20px rgba(153, 0, 0, 0.6);
+}
+
+/* Imágenes */
+.contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.img-proyecto { width: 100%; max-width: 400px; border: 1px solid #30363d; border-radius: 8px; }
