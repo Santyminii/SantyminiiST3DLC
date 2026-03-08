@@ -1,77 +1,101 @@
-/* --- BLINDAJE FINAL DEL FORMULARIO DE FEEDBACK (SANTYMINII EDITION) --- */
+/* --- RECONSTRUCCIÓN TOTAL DEL SITIO --- */
 
-/* Contenedor principal: Alinea todo en columna y lo centra en la tarjeta */
+@font-face {
+    font-family: 'LD Slender';
+    src: url('ldslender.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Eordeoghlakat';
+    src: url('Eordeoghlakat.ttf');
+    font-display: swap;
+}
+
+body {
+    font-family: 'LD Slender', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #000; 
+    color: white;
+}
+
+header {
+    background: rgba(13, 17, 23, 0.7);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ff9999;
+    backdrop-filter: blur(8px);
+}
+
+.container { 
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 0 20px; 
+}
+
+.card {
+    background: rgba(22, 27, 34, 0.85);
+    padding: 40px; 
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    backdrop-filter: blur(4px);
+}
+
+.titulo-dlc {
+    font-family: 'Eordeoghlakat', serif !important;
+    color: #990000; 
+    font-size: 3.5rem; 
+    text-align: center;
+}
+
+/* --- ESTILOS DEL FORMULARIO (SISTEMA BLINDADO) --- */
+
 .formulario-feedback {
     display: flex !important;
-    flex-direction: column !important; /* Forza la disposición vertical */
-    align-items: center !important;    /* Centra los elementos horizontalmente */
-    gap: 25px !important;              /* Espacio vertical entre campos */
-    max-width: 600px !important;
-    margin: 60px auto 30px !important; /* Margen superior amplio para separar de las imágenes */
-    padding: 20px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
     width: 100% !important;
-    box-sizing: border-box !important;
+    max-width: 600px !important;
+    margin: 40px auto !important;
 }
 
-/* Estilo de los cuadros de entrada (Apodo y Feedback) */
 .formulario-feedback input, 
 .formulario-feedback textarea {
-    background: rgba(13, 17, 23, 0.75) !important; /* Fondo oscuro translúcido */
-    border: 1px solid #30363d !important;
+    width: 100% !important;
+    background: rgba(13, 17, 23, 0.9) !important;
+    border: 1px solid #444cf7 !important;
     border-radius: 8px !important;
-    padding: 18px !important;
+    padding: 15px !important;
     color: white !important;
-    font-family: 'LD Slender', sans-serif !important; /* Fuente base del proyecto */
-    font-size: 1.4rem !important;
-    backdrop-filter: blur(4px) !important;
-    transition: all 0.3s ease !important;
-    width: 100% !important;            /* Ocupa el ancho total del contenedor */
+    font-family: 'LD Slender', sans-serif !important;
+    font-size: 1.2rem !important;
     box-sizing: border-box !important;
 }
 
-/* Efecto visual al escribir o seleccionar un cuadro */
-.formulario-feedback input:focus, 
-.formulario-feedback textarea:focus {
-    outline: none !important;
-    border-color: #444cf7 !important; /* Azul neón para resaltar el enfoque */
-    box-shadow: 0 0 15px rgba(68, 76, 247, 0.4) !important;
-}
-
-/* Tamaño específico para el área de mensaje */
-.formulario-feedback textarea {
-    height: 180px !important;
-    resize: none !important; /* Evita que el usuario deforme el diseño */
-}
-
-/* El botón de envío: Estilo robusto y apocalíptico */
 .formulario-feedback button {
-    background-color: #990000 !important; /* Rojo oscuro de los títulos del DLC */
+    width: 100% !important;
+    background-color: #990000 !important;
     color: white !important;
-    border: 2px solid rgba(255, 255, 255, 0.2) !important;
-    padding: 18px 40px !important;
+    padding: 15px !important;
     border-radius: 8px !important;
-    font-family: 'Eordeoghlakat', serif !important; /* Fuente de los encabezados */
+    font-family: 'Eordeoghlakat', serif !important;
     font-size: 2.2rem !important;
     cursor: pointer !important;
-    transition: all 0.4s ease !important;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6) !important;
-    display: inline-block !important;
-    width: 100% !important; /* Ocupa el ancho total para mayor impacto visual */
+    border: none !important;
+    transition: 0.3s !important;
 }
 
-/* Efecto al pasar el cursor sobre el botón */
 .formulario-feedback button:hover {
-    background-color: #7b0101 !important;
-    transform: translateY(-4px) !important; /* Pequeño salto hacia arriba */
-    box-shadow: 0 12px 25px rgba(153, 0, 0, 0.5) !important;
-    border-color: white !important;
+    background-color: #ff0000 !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5) !important;
 }
 
-/* Estado visual cuando el formulario se está enviando */
-.formulario-feedback button:disabled {
-    background-color: #161b22 !important;
-    color: #8b949e !important;
-    border-color: #30363d !important;
-    cursor: not-allowed !important;
-    transform: none !important;
-}
+/* Imágenes */
+.contenedor-triangulo { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.img-proyecto { width: 100%; max-width: 400px; border: 1px solid #30363d; border-radius: 8px; }
