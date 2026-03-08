@@ -63,17 +63,17 @@
             <h2 class="titulo-dlc" style="margin-top: 80px; font-size: 5rem;">Feedback</h2>
             
             <p class="texto">
-                ¿Tienes ideas para el apocalipsis o encontraste un error en el sistema? Déjanos tu reporte.
+                ¿Tienes ideas para el DLC? Comentalo :)
             </p>
 
             <form id="formFeedback" class="formulario-feedback">
                 <input type="text" id="apodo" placeholder="Tu apodo de superviviente" required>
                 <textarea id="comentarios" placeholder="Escribe tu feedback aquí..." required></textarea>
-                <button type="submit" id="btnEnviar">Enviar al Almacén</button>
+                <button type="submit" id="btnEnviar">Enviar</button>
             </form>
 
             <div id="mensajeExito" style="display:none; text-align:center; margin-top:20px; color: #444cf7; font-family: 'LD Slender'; font-size: 1.2rem;">
-                ¡Mensaje recibido! Los datos han sido guardados en el registro.
+                Gracias por tu mensaje, seguiremos trabajando :)
             </div>
             </section> 
     </main> 
@@ -88,7 +88,7 @@
 
     <script>
       // REEMPLAZA ESTA URL POR LA DE TU WEB APP DE GOOGLE
-      const scriptURL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI'; 
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxp4O6MyV36_PvFUZf6i-rfZ9yZ8t0kdWm8JJXlKvPeJU6xbN1iPKAU5EvjHujZ2bsE/exec'; 
       const form = document.getElementById('formFeedback');
       const btn = document.getElementById('btnEnviar');
       const exito = document.getElementById('mensajeExito');
@@ -126,3 +126,4 @@
 
 </body>
 </html>
+
