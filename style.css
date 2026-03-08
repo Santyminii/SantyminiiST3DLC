@@ -1,74 +1,77 @@
-/* --- BLINDAJE FINAL DEL FORMULARIO DE FEEDBACK (AJUSTADO) --- */
+/* --- BLINDAJE FINAL DEL FORMULARIO DE FEEDBACK (SANTYMINII EDITION) --- */
 
-/* Contenedor principal: Forza a los hijos a ir en columna y centrarse */
+/* Contenedor principal: Alinea todo en columna y lo centra en la tarjeta */
 .formulario-feedback {
-    display: flex;
-    flex-direction: column; /* Importante: Todo hacia abajo */
-    align-items: center;    /* Centra los elementos horizontalmente */
-    gap: 25px;              /* Espacio vertical generoso entre campos */
-    max-width: 600px;
-    margin: 60px auto 30px; /* Centra el formulario en la tarjeta con buen margen */
-    padding: 20px;
+    display: flex !important;
+    flex-direction: column !important; /* Forza la disposición vertical */
+    align-items: center !important;    /* Centra los elementos horizontalmente */
+    gap: 25px !important;              /* Espacio vertical entre campos */
+    max-width: 600px !important;
+    margin: 60px auto 30px !important; /* Margen superior amplio para separar de las imágenes */
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Campos de texto (Apodo y Mensaje) */
+/* Estilo de los cuadros de entrada (Apodo y Feedback) */
 .formulario-feedback input, 
 .formulario-feedback textarea {
-    background: rgba(13, 17, 23, 0.65); /* Transparencia como el card */
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 18px;          /* Más relleno para que sea cómodo escribir */
-    color: white;
-    font-family: 'LD Slender', sans-serif;
-    font-size: 1.3rem;      /* Letra más grande y legible */
-    backdrop-filter: blur(4px);
-    transition: 0.3s;
-    width: 100%;            /* Ocupa todo el ancho disponible */
-    box-sizing: border-box; /* Asegura que el relleno no lo ensanche */
+    background: rgba(13, 17, 23, 0.75) !important; /* Fondo oscuro translúcido */
+    border: 1px solid #30363d !important;
+    border-radius: 8px !important;
+    padding: 18px !important;
+    color: white !important;
+    font-family: 'LD Slender', sans-serif !important; /* Fuente base del proyecto */
+    font-size: 1.4rem !important;
+    backdrop-filter: blur(4px) !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;            /* Ocupa el ancho total del contenedor */
+    box-sizing: border-box !important;
 }
 
-/* Efecto al hacer clic en los cuadros */
+/* Efecto visual al escribir o seleccionar un cuadro */
 .formulario-feedback input:focus, 
 .formulario-feedback textarea:focus {
-    outline: none;
-    border-color: #444cf7; /* Azul neón para enfoque */
-    box-shadow: 0 0 15px rgba(68, 76, 247, 0.4);
+    outline: none !important;
+    border-color: #444cf7 !important; /* Azul neón para resaltar el enfoque */
+    box-shadow: 0 0 15px rgba(68, 76, 247, 0.4) !important;
 }
 
+/* Tamaño específico para el área de mensaje */
 .formulario-feedback textarea {
-    height: 180px;          /* Más alto para el mensaje largo */
-    resize: none;           /* Bloqueamos el cambio de tamaño */
+    height: 180px !important;
+    resize: none !important; /* Evita que el usuario deforme el diseño */
 }
 
-/* El botón de envío: Forza que se vea rudo */
+/* El botón de envío: Estilo robusto y apocalíptico */
 .formulario-feedback button {
-    background-color: #990000; /* Rojo oscuro característico */
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-    padding: 18px 30px;     /* Relleno cómodo */
-    border-radius: 8px;
-    font-family: 'Eordeoghlakat', serif; /* Tu fuente de títulos */
-    font-size: 2.2rem;      /* Botón GRANDE y épico */
-    cursor: pointer;
-    transition: 0.4s ease;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    display: block;         /* Forza a ser un bloque completo */
-    width: auto;            /* No ocupa todo el ancho, solo lo necesario */
-    max-width: 100%;
+    background-color: #990000 !important; /* Rojo oscuro de los títulos del DLC */
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 18px 40px !important;
+    border-radius: 8px !important;
+    font-family: 'Eordeoghlakat', serif !important; /* Fuente de los encabezados */
+    font-size: 2.2rem !important;
+    cursor: pointer !important;
+    transition: all 0.4s ease !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6) !important;
+    display: inline-block !important;
+    width: 100% !important; /* Ocupa el ancho total para mayor impacto visual */
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 .formulario-feedback button:hover {
-    background-color: #7b0101;
-    transform: translateY(-4px) scale(1.03); /* Se levanta sutilmente */
-    box-shadow: 0 12px 25px rgba(153, 0, 0, 0.5);
-    border-color: white;
+    background-color: #7b0101 !important;
+    transform: translateY(-4px) !important; /* Pequeño salto hacia arriba */
+    box-shadow: 0 12px 25px rgba(153, 0, 0, 0.5) !important;
+    border-color: white !important;
 }
 
-/* Estado cuando está enviando (Gris oscuro) */
+/* Estado visual cuando el formulario se está enviando */
 .formulario-feedback button:disabled {
-    background-color: #161b22;
-    color: #8b949e;
-    border-color: #30363d;
-    cursor: not-allowed;
-    transform: none;
+    background-color: #161b22 !important;
+    color: #8b949e !important;
+    border-color: #30363d !important;
+    cursor: not-allowed !important;
+    transform: none !important;
 }
