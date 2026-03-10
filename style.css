@@ -243,3 +243,26 @@ header {
         text-align: center !important;
     }
 }
+
+/*efecto enlace yt*/
+.card a {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.card a:hover {
+    transform: scale(1.1) !important;
+    color: #fa8989 !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* contorno img*/
+.img-proyecto {
+    transition: all 0.3s ease-in-out !important;
+    border: 3px solid transparent !important;
+}
+
+.img-proyecto:hover {
+    transform: scale(1.05) !important;
+    border-color: #ffb3b3 !important;
+    box-shadow: 0 0 20px #ffb3b3 !important;
+}
