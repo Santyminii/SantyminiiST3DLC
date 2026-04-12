@@ -85,7 +85,7 @@ header {
 }
 
 .barra-progreso {
-    width: 15% !important; /* Ajustar valor mientras mayor sea el avance */
+    width: 17% !important; /* Ajustar valor mientras mayor sea el avance */
     height: 100% !important;
     background: linear-gradient(90deg, #660000, #ff0000) !important;
     border-radius: 50px !important;
