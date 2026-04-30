@@ -27,7 +27,7 @@ body {
 header {
     /* El último valor (0.8) es la transparencia */
     background: rgba(17, 8, 8, 0.9) !important; 
-    padding: 120px 20px !important;
+    padding: 80px 20px !important;
     text-align: center !important;
     border-bottom: 2px solid #ff9999 !important;
     
