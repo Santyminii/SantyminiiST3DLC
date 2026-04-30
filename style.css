@@ -267,6 +267,6 @@ header {
 
 .img-proyecto:hover {
     transform: scale(1.05) !important;
-    border-color: #ffb3b3 !important;
-    box-shadow: 0 0 20px #ffb3b3 !important;
+    border-color: #340707 !important;
+    box-shadow: 0 0 20px #340707 !important;
 }
