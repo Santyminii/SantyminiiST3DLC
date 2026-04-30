@@ -20,15 +20,19 @@ body {
     background-position: center !important;
     background-attachment: fixed !important;
     background-color: #000 !important; 
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     width: 100% !important;
 }
 
 header {
-    background: rgba(13, 17, 23, 0.8) !important;
-    padding: 50px 20px !important;
+    /* El último valor (0.8) es la transparencia */
+    background: rgba(17, 8, 8, 0.9) !important; 
+    padding: 120px 20px !important;
     text-align: center !important;
     border-bottom: 2px solid #ff9999 !important;
+    
+    /* Extra: esto hace que lo que esté detrás se vea borroso, estilo cristal */
+    backdrop-filter: blur(10px); 
 }
 
 /* Fix del ancho */
@@ -40,7 +44,7 @@ header {
 }
 
 .card {
-    background: rgba(22, 27, 34, 0.9) !important;
+    background: rgba(11, 2, 2, 0.5) !important;
     padding: 40px !important; 
     border-radius: 15px !important;
     border: 1px solid #30363d !important;
